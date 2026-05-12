@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionList, Text, View, StyleSheet, TouchableOpacity, StatusBar } from 'react-native';
-import { SafeAreaView } from 'react-native/types_generated/index';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Dados estruturados extraídos do documento
 const relatorioIA = [
@@ -38,7 +38,6 @@ export default function App() {
   
   // Renderiza cada item da lista (Os Cards)
   const renderItem = ({ item }) => (
-    // TouchableOpacity substitui o efeito "hover" do CSS no mobile
     <TouchableOpacity activeOpacity={0.7} style={styles.card}>
       <Text style={styles.cardTitle}>{item.titulo}</Text>
       <Text style={styles.cardDesc}>{item.descricao}</Text>
